@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'home.dart';
 
@@ -53,10 +54,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       .signInWithEmailAndPassword(
                           email: _email, password: _password)
                       .then((_) {
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Get.to(HomeScreen());
                   });
-                  print("Working");
                 }),
             RaisedButton(
               color: Theme.of(context).accentColor,
@@ -66,8 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     .createUserWithEmailAndPassword(
                         email: _email, password: _password)
                     .then((_) {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                  Get.to(HomeScreen());
                 });
               },
             )
