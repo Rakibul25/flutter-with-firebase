@@ -1,3 +1,4 @@
+import 'package:firebase_application_1/screens/verify.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -65,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     .createUserWithEmailAndPassword(
                         email: _email, password: _password)
                     .then((_) {
-                  Get.to(HomeScreen());
+                  Get.to(VerifyScreen());
                 });
               },
             )
