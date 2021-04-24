@@ -67,6 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         email: _email, password: _password)
                     .then((_) {
                   Get.to(VerifyScreen());
+                  print("object");
                 });
               },
             )
